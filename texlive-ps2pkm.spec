@@ -5,7 +5,7 @@
 # catalog-license other-free
 # catalog-version 1.6 beta 1
 Name:		texlive-ps2pkm
-Version:	1.6.beta.1
+Version:	1.6 beta 1
 Release:	1
 Summary:	Generate a PK font from an Adobe Type 1 font
 Group:		Publishing
@@ -50,6 +50,7 @@ donated to the X consortium by IBM.
 %{_texmfdir}/doc/man/man1/pk2bm.man1.pdf
 %{_mandir}/man1/ps2pk.1*
 %{_texmfdir}/doc/man/man1/ps2pk.man1.pdf
+%doc %{_tlpkgobjdir}/*.tlpobj
 
 #-----------------------------------------------------------------------
 %prep
@@ -62,3 +63,5 @@ mkdir -p %{buildroot}%{_datadir}
 cp -fpar texmf %{buildroot}%{_datadir}
 mkdir -p %{buildroot}%{_mandir}/man1
 mv %{buildroot}%{_texmfdir}/doc/man/man1/*.1 %{buildroot}%{_mandir}/man1
+mkdir -p %{buildroot}%{_tlpkgobjdir}
+cp -fpa tlpkg/tlpobj/*.tlpobj %{buildroot}%{_tlpkgobjdir}
