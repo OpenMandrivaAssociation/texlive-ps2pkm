@@ -1,12 +1,12 @@
-# revision 26689
+# revision 29764
 # category TLCore
 # catalog-ctan /fonts/utilities/ps2pk
-# catalog-date 2011-05-31 11:59:42 +0200
+# catalog-date 2012-07-20 20:39:39 +0200
 # catalog-license other-free
 # catalog-version 1.6 beta 1
 Name:		texlive-ps2pkm
 Version:	1.6beta1
-Release:	3
+Release:	4
 Summary:	Generate a PK font from an Adobe Type 1 font
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/fonts/utilities/ps2pk
@@ -35,13 +35,13 @@ donated to the X consortium by IBM.
 #-----------------------------------------------------------------------
 %files
 %{_mandir}/man1/mag.1*
-%{_texmfdir}/doc/man/man1/mag.man1.pdf
+%{_texmfdistdir}/doc/man/man1/mag.man1.pdf
 %{_mandir}/man1/pfb2pfa.1*
-%{_texmfdir}/doc/man/man1/pfb2pfa.man1.pdf
+%{_texmfdistdir}/doc/man/man1/pfb2pfa.man1.pdf
 %{_mandir}/man1/pk2bm.1*
-%{_texmfdir}/doc/man/man1/pk2bm.man1.pdf
+%{_texmfdistdir}/doc/man/man1/pk2bm.man1.pdf
 %{_mandir}/man1/ps2pk.1*
-%{_texmfdir}/doc/man/man1/ps2pk.man1.pdf
+%{_texmfdistdir}/doc/man/man1/ps2pk.man1.pdf
 
 #-----------------------------------------------------------------------
 %prep
@@ -51,25 +51,6 @@ donated to the X consortium by IBM.
 
 %install
 mkdir -p %{buildroot}%{_datadir}
-cp -fpar texmf %{buildroot}%{_datadir}
+cp -fpar texmf-dist %{buildroot}%{_datadir}
 mkdir -p %{buildroot}%{_mandir}/man1
-mv %{buildroot}%{_texmfdir}/doc/man/man1/*.1 %{buildroot}%{_mandir}/man1
-
-
-%changelog
-* Wed Aug 08 2012 Paulo Andrade <pcpa@mandriva.com.br> 1.6beta1-3
-+ Revision: 812788
-- Update to latest release.
-
-* Wed Jan 04 2012 Paulo Andrade <pcpa@mandriva.com.br> 1.6beta1-2
-+ Revision: 755141
-- Rebuild to reduce used resources
-
-* Sat Nov 05 2011 Paulo Andrade <pcpa@mandriva.com.br> 1.6beta1-1
-+ Revision: 719314
-- texlive-ps2pkm
-- texlive-ps2pkm
-- texlive-ps2pkm
-- texlive-ps2pkm
-- texlive-ps2pkm
-
+mv %{buildroot}%{_texmfdistdir}/doc/man/man1/*.1 %{buildroot}%{_mandir}/man1
