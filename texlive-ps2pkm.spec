@@ -6,7 +6,7 @@
 # catalog-version 1.6 beta 1
 Name:		texlive-ps2pkm
 Version:	1.6beta1
-Release:	10
+Release:	11
 Summary:	Generate a PK font from an Adobe Type 1 font
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/fonts/utilities/ps2pk
