@@ -9,7 +9,7 @@ Version:	1.6beta1
 Release:	15
 Summary:	Generate a PK font from an Adobe Type 1 font
 Group:		Publishing
-URL:		http://www.ctan.org/tex-archive/fonts/utilities/ps2pk
+URL:		https://www.ctan.org/tex-archive/fonts/utilities/ps2pk
 License:	OTHER-FREE
 Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/ps2pkm.tar.xz
 Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/ps2pkm.doc.tar.xz
